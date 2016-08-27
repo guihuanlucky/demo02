@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        canvas{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="600" height="400" id="cas"></canvas>
+</body>
+<script>
+    var cas=document.getElementById('cas');
+    var ctx=cas.getContext('2d');
+
+    //lineCap
+    ctx.moveTo(100,100);
+    ctx.lineTo(300,100);
+    ctx.lineWidth=30;
+    ctx.lineCap='butt';
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(100,200);
+    ctx.lineTo(300,200);
+
+    ctx.lineCap='round';
+    ctx.lineWidth=30;
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(100,300);
+    ctx.lineTo(300,300);
+
+    ctx.lineCap='square';
+    ctx.lineWidth=30;
+    ctx.stroke();
+
+    //lineJoin
+
+    ctx.moveTo(350,100);
+    ctx.lineTo(450,150);
+    ctx.lineTo(550,100);
+    ctx.lineJoin='miter';
+    ctx.stroke();
+
+</script>
+</html>

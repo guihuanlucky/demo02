@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        canvas{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="600" height="800" id="cas"></canvas>
+</body>
+<script>
+    var cas=document.getElementById('cas');
+    var cxt=cas.getContext('2d');
+    cxt.moveTo(100,100);
+    cxt.lineTo(500,100);
+    cxt.strokeStyle='red';
+    cxt.stroke();
+
+    cxt.beginPath();
+    cxt.moveTo(100,200);
+    cxt.lineTo(500,200);
+    cxt.strokeStyle='#00ff00';
+    cxt.stroke();
+
+    cxt.beginPath();
+    cxt.moveTo(100,300);
+    cxt.lineTo(500,300);
+    cxt.strokeStyle='rgb(0,0,255)';
+    cxt.stroke();
+
+
+
+    cxt.beginPath();
+    cxt.moveTo(200,400);
+    cxt.lineTo(100,500);
+    cxt.lineTo(300,500);
+    cxt.fillStyle='green';
+    cxt.fill();
+
+</script>
+</html>

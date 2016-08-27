@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        canvas{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas width='600' height='400' id="cas"></canvas>
+</body>
+<script>
+    var cas=document.getElementById('cas');
+    var ctx=cas.getContext('2d');
+
+
+    var width=40;
+    var height=40;
+
+    var xCount=cas.width/width;
+    var yCount=cas.height/height;
+
+    for(var i=1;i<=yCount;i++){
+        ctx.moveTo(0,i*height);
+        for(var j=1;j<=xCount;j++){
+            ctx.lineTo(width*j,height*i);
+            ctx.lineTo(width*j,height*(i-1));
+            ctx.moveTo(width*j,height*i);
+        }
+
+    }
+    ctx.stroke();
+
+
+</script>
+</html>

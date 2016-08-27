@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<canvas width='600' height='400' id='cas'></canvas>
+</body>
+
+<script>
+    //先获得画布
+    var cas = document.getElementById('cas');
+    //调用方法获得绘图工具
+    var ctx = cas.getContext('2d');
+
+    ctx.moveTo(100, 100);
+    ctx.lineTo(100, 250);
+    ctx.lineTo(300, 250);
+    ctx.lineTo(300, 100);
+    ctx.closePath();
+
+    ctx.moveTo(200, 125);
+    ctx.lineTo(275, 175);
+    ctx.lineTo(225, 175);
+    ctx.lineTo(225, 225);
+    ctx.lineTo(175, 225);
+    ctx.lineTo(175, 175);
+    ctx.lineTo(125, 175);
+    ctx.closePath();
+
+    ctx.stroke();
+    ctx.fill();
+
+
+</script>
+</html>

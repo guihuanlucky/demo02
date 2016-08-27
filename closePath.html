@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        canvas{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+<canvas width='600' height='400' id='cas'></canvas>
+</body>
+<script>
+    var cas=document.getElementById('cas');//获得画布
+    var ctx=cas.getContext('2d');//获得绘图工具
+
+
+    ctx.moveTo(50,150);
+    ctx.lineTo(50,250);
+    ctx.lineTo(150,250);
+    ctx.lineTo(150,150);
+    //ctx.lineTo(50,150);
+    ctx.closePath();
+
+    //ctx.fill();
+
+    ctx.lineWidth=10;
+    ctx.moveTo(200,150);
+    ctx.lineTo(200,250);
+    ctx.lineTo(300,250);
+    //ctx.lineTo(200,150);
+    ctx.closePath();
+    ctx.stroke();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
